@@ -24,6 +24,9 @@ class CreateCandidatosTable extends Migration
             $table->string('naturalidade', 50);
             $table->string('telefone', 15);
             $table->string('celular', 15);
+            $table->string('pai', 100);
+            $table->string('mae', 100);
+            $table->string('cep', 9);
             $table->string('endereco', 100);
             $table->string('complemento', 10);
             $table->string('numero', 10);

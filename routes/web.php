@@ -15,4 +15,5 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'Site\SiteController@index')->name('site.index');
 Route::get('cadastrar', 'Site\SiteController@cadastrar')->name('site.cadastrar');
+Route::post('cadastrar', 'Site\SiteController@cadastrar')->name('site.cadastrar.store');
 Route::get('cadastros', 'Site\SiteController@cadastros')->name('site.cadastros');
