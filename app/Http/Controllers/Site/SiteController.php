@@ -5,7 +5,7 @@ namespace App\Http\Controllers\site;
 use App\Http\Controllers\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use App\Models\Site\SiteCadastro;
-use Carbon\Carbon;
+use App\Http\Requests\StoreUpdateCadastroFormRequest;
 
 class SiteController extends Controller { 
     
@@ -56,7 +56,7 @@ class SiteController extends Controller {
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request) {
+    public function store(StoreUpdateCadastroFormRequest $request) {
         
         $request['nascimento'] = inverteData($request->nascimento);
         $insert = $this->cadastro->newCadastro($request);        

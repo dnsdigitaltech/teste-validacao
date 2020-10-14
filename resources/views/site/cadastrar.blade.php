@@ -16,6 +16,15 @@
         @endif
 
             <div class="content-load">
+                @if ($errors->any())
+                    <div class="alert alert-danger">
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
                 {!!Form::open(['route' => 'site.cadastrar.store','class' => 'form form-search form-ds', 'files' => 'true', 'onsubmit' => 'ShowLoading()'])!!}
                         <div class="card card-gray">
                             <div class="card-header">
