@@ -6,7 +6,7 @@
             </div>
         <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-            <li class="breadcrumb-item"><a href="{{ asset('./corporativo') }}">Corporativo</a></li>
+            <li class="breadcrumb-item"><a href="{{ route('site.index') }}">Principal</a></li>
             @if(!Request::is('corporativo'))
             <li class="breadcrumb-item"><a href="#" title="{{$cat}}">{{$cat}}</a></li>
             <li class="breadcrumb-item"><a href="#" title="{{$subcat}}">{{$subcat}}</a></li>

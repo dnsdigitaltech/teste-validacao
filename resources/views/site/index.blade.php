@@ -16,19 +16,34 @@
         @endif
 
         <div class="content">
-            <div class="title m-b-md">
-                Laravel
-            </div>
-
+            <h3 class="text-primary"><i class="fas fa-paint-brush"></i> Bem Vindo ao NOSSO SISTEMA de cadastro</h3>
             <div class="links">
-                <a href="https://laravel.com/docs">Docs</a>
-                <a href="https://laracasts.com">Laracasts</a>
-                <a href="https://laravel-news.com">News</a>
-                <a href="https://blog.laravel.com">Blog</a>
-                <a href="https://nova.laravel.com">Nova</a>
-                <a href="https://forge.laravel.com">Forge</a>
-                <a href="https://vapor.laravel.com">Vapor</a>
-                <a href="https://github.com/laravel/laravel">GitHub</a>
+                <div class="row">
+                    <div class="col-12 col-sm-4">
+                      <div class="info-box bg-light">
+                        <div class="info-box-content">
+                          <span class="info-box-text text-center text-muted">Cadastrados</span>
+                          <span class="info-box-number text-center text-muted mb-0">2300</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12 col-sm-4">
+                      <div class="info-box bg-light">
+                        <div class="info-box-content">
+                          <span class="info-box-text text-center text-muted">Maculinos</span>
+                          <span class="info-box-number text-center text-muted mb-0">2000</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12 col-sm-4">
+                      <div class="info-box bg-light">
+                        <div class="info-box-content">
+                          <span class="info-box-text text-center text-muted">Femininos</span>
+                          <span class="info-box-number text-center text-muted mb-0">20 <span>
+                        </span></span></div>
+                      </div>
+                    </div>
+                  </div>
             </div>
         </div>
     </div>

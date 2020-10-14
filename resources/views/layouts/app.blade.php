@@ -2,30 +2,30 @@
 <nav class="mt-2">
     <ul class="nav nav-pills nav-sidebar flex-column nav-flat" data-widget="treeview" role="menu" data-accordion="false">
         <li class="nav-item">
-            <a href="#" class="nav-link active">
+            <a href="{{ route('site.index') }}" class="nav-link active">
                 <i class="nav-icon fas fa-tachometer-alt"></i>
-                <p>CORPORATIVO</p>
+                <p>PRINCIPAL</p>
             </a>
         </li>
         
         <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
-            <i class="fas fa-map-marked-alt"></i>
-                <p>PÁTIO<i class="fas fa-angle-left right"></i></p>
+                <i class="fas fa-id-card"></i>
+                <p>CADASTRO<i class="fas fa-angle-left right"></i></p>
             </a>
             <ul class="nav nav-treeview">  
                 <li class="nav-item">
-                        <a href="#" class="nav-link ">
+                        <a href="{{ route('site.cadastrar') }}" class="nav-link ">
                             &nbsp;&nbsp;&nbsp;&nbsp;
-                            <i class="fas fa-search"></i>
-                            <p> Consulta Veículo</p>
+                            <i class="fas fa-plus-circle"></i>
+                            <p> Novo</p>
                         </a>
                     </li>              
                     <li class="nav-item">
-                        <a href="#" class="nav-link">
+                        <a href="{{ route('site.cadastros') }}" class="nav-link">
                             &nbsp;&nbsp;&nbsp;&nbsp;
-                            <i class="fas fa-search-location"></i>
-                            <p> Consulta no Pátio</p>
+                            <i class="fas fa-search"></i>
+                            <p> cadastrados</p>
                         </a>
                     </li>                
                 </li>
