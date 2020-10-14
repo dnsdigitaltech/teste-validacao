@@ -25,7 +25,7 @@ class SiteController extends Controller {
         $date['routercat'] = 'site.index';
         $date['routerlist'] = 'site.index';
         $date['subcat'] = '';
-        $date['fapage'] = 'fas fa-tachometer-alt';
+        $date['fapage'] = 'fas fa-plus-circle';
         $date['titlepage'] = 'Cadastre-se';
         $date['title'] = 'Cadastre-se';
         $date['subtitle'] = 'Cadastre-se';
@@ -40,10 +40,10 @@ class SiteController extends Controller {
         $date['routercat'] = 'site.index';
         $date['routerlist'] = 'site.index';
         $date['subcat'] = '';
-        $date['fapage'] = 'fas fa-tachometer-alt';
-        $date['titlepage'] = 'Candidatoos Cadastrados';
-        $date['title'] = 'Candidatoos Cadastrados';
-        $date['subtitle'] = 'Candidatoos Cadastrados';
+        $date['fapage'] = 'fas fa-search';
+        $date['titlepage'] = 'Candidatos Cadastrados';
+        $date['title'] = 'Candidatos Cadastrados';
+        $date['subtitle'] = 'Candidatos Cadastrados';
         $date['cat'] = '';
         $date['catfa'] = 'fa-th';
         $date['routerlist'] = 'site.index';

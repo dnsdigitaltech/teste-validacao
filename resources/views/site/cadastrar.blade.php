@@ -16,7 +16,7 @@
         @endif
 
         <div class="content">
-            <h3 class="text-primary"><i class="fas fa-paint-brush"></i> Cadastre-se</h3>
+            
             
         </div>
     </div>

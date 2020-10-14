@@ -16,7 +16,7 @@
         @endif
 
         <div class="content">
-            <h3 class="text-primary"><i class="fas fa-paint-brush"></i> Bem Vindo ao NOSSO SISTEMA de cadastro</h3>
+            
             <div class="links">
                 <div class="row">
                     <div class="col-12 col-sm-4">
