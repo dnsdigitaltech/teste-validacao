@@ -43,6 +43,7 @@ class StoreUpdateCadastroFormRequest extends FormRequest
             'pai' => 'required|min:3|max:100',
             'mae' => 'required|min:3|max:100',
             'cep' => 'required',
+            'uf' => 'required|max:2',
         ];
     }
     public function messages()
@@ -63,7 +64,9 @@ class StoreUpdateCadastroFormRequest extends FormRequest
             'naturalidade.required' => 'O campo " Naturalidade " é obrigatório',
             'pai.required' => 'O campo " Nome do Pai " é obrigatório',
             'mae.required' => 'O campo " Nome da mãe " é obrigatório',
-            'cep.required' => 'O campo " CEP " é obrigatório'
+            'cep.required' => 'O campo " CEP " é obrigatório',
+            'uf.required' => 'O campo " UF " é obrigatório',
+            'uf.max' => 'O campo " UF " não pode ser superior a 2 digitos!',
         ];
     }
 

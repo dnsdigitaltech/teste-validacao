@@ -92,7 +92,7 @@
                                         <div class="col-sm-2">
                                             <div class="form-group">
                                                 <label for="cpf">CPF</label>
-                                                {!! Form::text('cpf', null, ['class' => 'form-control', 'placeholder' => '___.___.___-__', 'data-inputmask="&quot;mask&quot;: &quot;999.999.999-99&quot;" data-mask=""', 'required']) !!}
+                                                {!! Form::text('cpf', null, ['class' => 'form-control', 'maxlength' => '15', 'placeholder' => '___.___.___-__', 'data-inputmask="&quot;mask&quot;: &quot;999.999.999-99&quot;" data-mask=""', 'required']) !!}
                                             </div>
                                         </div>
                                     </div>
@@ -106,19 +106,19 @@
                                         <div class="col-sm-2">
                                             <div class="form-group">
                                                 <label for="telefone">Telefone</label>
-                                                {!! Form::text('telefone', null, ['class' => 'form-control', 'placeholder' => '(__)____-____', 'id' => 'CpfLeiloeiro', 'data-inputmask="&quot;mask&quot;: &quot;(99)9999-9999&quot;" data-mask=""', 'required']) !!}
+                                                {!! Form::text('telefone', null, ['class' => 'form-control', 'maxlength' => '15', 'placeholder' => '(__)____-____', 'id' => 'CpfLeiloeiro', 'data-inputmask="&quot;mask&quot;: &quot;(99)9999-9999&quot;" data-mask=""', 'required']) !!}
                                             </div>
                                         </div>                                    
                                         <div class="col-sm-2">
                                             <div class="form-group">
                                                 <label for="celular">Celular</label>
-                                                {!! Form::text('celular', null, ['class' => 'form-control', 'placeholder' => '(__)_____-____', 'id' => 'CpfLeiloeiro', 'data-inputmask="&quot;mask&quot;: &quot;(99)99999-9999&quot;" data-mask=""', 'required']) !!}
+                                                {!! Form::text('celular', null, ['class' => 'form-control', 'maxlength' => '15', 'placeholder' => '(__)_____-____', 'id' => 'CpfLeiloeiro', 'data-inputmask="&quot;mask&quot;: &quot;(99)99999-9999&quot;" data-mask=""', 'required']) !!}
                                             </div>
                                         </div> 
                                         <div class="col-sm-4">
                                             <div class="form-group">
                                                 <label for="naturalidade">Naturalidade</label>
-                                                {!! Form::text('naturalidade',null,['class' => 'form-control', 'maxlength' => '30', 'placeholder' => 'Naturalidade', 'required']) !!}
+                                                {!! Form::text('naturalidade',null,['class' => 'form-control', 'maxlength' => '50', 'placeholder' => 'Naturalidade', 'required']) !!}
                                             </div>
                                         </div>
                                     </div>
@@ -154,37 +154,37 @@
                                         <div class="col-sm-2">
                                             <div class="form-group">
                                                 <label for="cep">CEP</label>
-                                                {!! Form::text('cep',null, ['class' => 'form-control ','placeholder' => '_____-___', 'data-inputmask="&quot;mask&quot;: &quot;99999-999&quot;" data-mask=""', 'id'=>'cep', 'size'=>'10','maxlength'=>'9', 'required' ]) !!}
+                                                {!! Form::text('cep',null, ['class' => 'form-control ', 'maxlength' => '9', 'placeholder' => '_____-___', 'data-inputmask="&quot;mask&quot;: &quot;99999-999&quot;" data-mask=""', 'id'=>'cep', 'size'=>'10','maxlength'=>'9', 'required' ]) !!}
                                             </div>
                                         </div>
                                         <div class="col-sm-3">
                                             <div class="form-group">
                                                 <label for="endereco">Endereço</label>
-                                                {!! Form::text('endereco',null, ['class' => 'form-control', 'id' => 'rua', 'placeholder' => 'Endereço', 'required']) !!}
+                                                {!! Form::text('endereco',null, ['class' => 'form-control', 'maxlength' => '100', 'id' => 'rua', 'placeholder' => 'Endereço', 'required']) !!}
                                             </div>
                                         </div>
                                         <div class="col-sm-2">
                                             <div class="form-group">
                                                 <label for="numero">Nº</label>
-                                                {!! Form::text('numero',null, ['class' => 'form-control',  'maxlength' => '5', 'placeholder' => 'Nº', 'required']) !!}
+                                                {!! Form::text('numero',null, ['class' => 'form-control',  'maxlength' => '10', 'placeholder' => 'Nº', 'required']) !!}
                                             </div>
                                         </div>
                                         <div class="col-sm-2">
                                             <div class="form-group">
                                                 <label for="complemento">Complemento</label>
-                                                {!! Form::text('complemento',null, ['class' => 'form-control',  'maxlength' => '11', 'placeholder' => 'Complemento', ]) !!}
+                                                {!! Form::text('complemento',null, ['class' => 'form-control',  'maxlength' => '10', 'placeholder' => 'Complemento', ]) !!}
                                             </div>
                                         </div>
                                         <div class="col-sm-2">
                                             <div class="form-group">
                                                 <label for="bairro">Bairro</label>
-                                                {!! Form::text('bairro',null, ['class' => 'form-control', 'id' => 'bairro', 'placeholder' => 'Bairro', 'required']) !!}
+                                                {!! Form::text('bairro',null, ['class' => 'form-control', 'maxlength' => '50', 'id' => 'bairro', 'placeholder' => 'Bairro', 'required']) !!}
                                             </div>
                                         </div>
                                         <div class="col-sm-1">
                                             <div class="form-group">
                                                 <label for="uf">UF</label>
-                                                {!! Form::text('uf',null, ['class' => 'form-control', 'id' => 'uf', 'placeholder' => 'UF', 'required']) !!}
+                                                {!! Form::text('uf',null, ['class' => 'form-control', 'maxlength' => '2', 'id' => 'uf', 'placeholder' => 'UF', 'required']) !!}
                                             </div>
                                         </div>
                                     </div>
