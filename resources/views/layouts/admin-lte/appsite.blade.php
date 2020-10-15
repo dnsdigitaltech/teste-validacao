@@ -207,6 +207,7 @@
 <body class="sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed sidebar-open">
 <!-- Site wrapper -->
 <div class="wrapper">
+  @include('layouts.admin-lte.nav-login')
   <!-- /.navbar -->
   <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-dark-primary elevation-4">

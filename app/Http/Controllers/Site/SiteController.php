@@ -16,11 +16,19 @@ class SiteController extends Controller {
     * @subpackage Page 
     * @param String $page
     * @return void
+    * @author DAVI BERNARDO [https://github.com/dnsdigitaltech]
+    * @version 1.0.2  
+    * Ano 2020 
     */
     public function __construct(SiteCadastro $cadastro) {
         $this->cadastro = $cadastro;
     }
-
+    /*
+    * Página Index
+    * @author DAVI BERNARDO [https://github.com/dnsdigitaltech]
+    * @version 1.0.2  
+    * Ano 2020 
+    */
     public function index() {
         $date['total'] = $this->cadastro->count();
         $date['totalm'] = $this->cadastro->where('sexo', 'm')->count();
@@ -37,18 +45,23 @@ class SiteController extends Controller {
         $date['catfa'] = 'fa-th';
         return view('site.index', $date);
     }   
-
+    /*
+    * Página cadastrar 
+    * @author DAVI BERNARDO [https://github.com/dnsdigitaltech]
+    * @version 1.0.2  
+    * Ano 2020 
+    */
     public function cadastrar() {
         $date['total'] = $this->cadastro->count();
         $date['module'] = 'SISTEMA';
         $date['routercat'] = 'site.index';
         $date['routerlist'] = 'site.index';
-        $date['subcat'] = '';
+        $date['subcat'] = 'Cadastrar';
         $date['fapage'] = 'fas fa-plus-circle';
         $date['titlepage'] = 'Cadastre-se';
         $date['title'] = 'Cadastre-se';
         $date['subtitle'] = 'Cadastre-se';
-        $date['cat'] = '';
+        $date['cat'] = 'Candidato';
         $date['catfa'] = 'fa-th';
         $date['routerlist'] = 'site.index';
         return view('site.cadastrar', $date);
@@ -69,34 +82,45 @@ class SiteController extends Controller {
         else
             return redirect()->back()->with('error' . 'Falha ao cadastrar!');
     }
-
+    /*
+    * Página cadastros 
+    * @author DAVI BERNARDO [https://github.com/dnsdigitaltech]
+    * @version 1.0.2  
+    * Ano 2020 
+    */
     public function cadastros() {
         $date['candidatos'] = $this->cadastro->get();
         $date['module'] = 'SISTEMA';
         $date['routercat'] = 'site.index';
         $date['routerlist'] = 'site.index';
-        $date['subcat'] = '';
+        $date['subcat'] = 'Cadastros';
         $date['fapage'] = 'fas fa-search';
         $date['titlepage'] = 'Candidatos Cadastrados';
         $date['title'] = 'Candidatos Cadastrados';
         $date['subtitle'] = 'Candidatos Cadastrados';
-        $date['cat'] = '';
+        $date['cat'] = 'Administrador';
         $date['catfa'] = 'fa-th';
         $date['routerlist'] = 'site.index';
         return view('site.cadastros', $date);
     }   
-
+    /*
+    * Página buscar 
+    * @author DAVI BERNARDO [https://github.com/dnsdigitaltech]
+    * @version 1.0.2  
+    * Ano 2020 
+    */
     public function buscar(Request $request) {
         $date['candidatos'] = $this->cadastro->where('cpf', $request->cpf)->get();
         $date['module'] = 'SISTEMA';
         $date['routercat'] = 'site.index';
         $date['routerlist'] = 'site.index';
-        $date['subcat'] = '';
+        $date['subcat'] = 'Buscar';
         $date['fapage'] = 'fas fa-search';
-        $date['titlepage'] = 'Candidatos Cadastrados';
-        $date['title'] = 'Candidatos Cadastrados';
-        $date['subtitle'] = 'Candidatos Cadastrados';
-        $date['cat'] = '';
+        $date['titlepage'] = 'Informe seu CPF';
+        $date['title'] = 'Informe seu CPF';
+        $date['subtitle'] = 'Informe seu CPF';
+        $date['cat'] = 'Candidato
+        ';
         $date['catfa'] = 'fa-th';
         $date['routerlist'] = 'site.index';
         return view('site.buscar', $date);
