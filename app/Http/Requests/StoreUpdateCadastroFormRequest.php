@@ -26,17 +26,18 @@ class StoreUpdateCadastroFormRequest extends FormRequest
      */
     public function rules()
     {
-        //pegar id para editar o mesmo item
-        $id = Request::all();
-        $email = $id['email'];
+        $valida = Request::all();
+        $email  = $valida['email'];
+        $cpf    = $valida['cpf'];
+        $rg     = $valida['rg'];
         return [
             //regras de validação
             'name' => 'required|min:3|max:100',
-            'rg' => "required|max:15",
-            'cpf' => "required|max:15",
+            'rg' => "required|max:15|unique:site_cadastros,rg,{$rg}",
+            'cpf' => "required|max:15|unique:site_cadastros,cpf,{$cpf}",
             'email' => "required|min:3|max:100|unique:site_cadastros,email,{$email}",
             'sexo' => 'required',
-            'nascimento' => 'required|date|max:8',
+            'nascimento' => 'required',
             'naturalidade' => 'required',
             'celular' => 'required',
             'pai' => 'required|min:3|max:100',
@@ -52,15 +53,13 @@ class StoreUpdateCadastroFormRequest extends FormRequest
             'name.max' => 'O campo " Nome " não pode ser superior a 100 digitos!',
             'rg.required' => 'O campo " RG " é obrigatório',
             'rg.max' => 'O campo " RG " não pode ser superior a 15 digitos!',
-            'rg.unique' => 'Sua Matrícula com este RJ já está cadastrada em nosso sistema!',
+            'rg.unique' => 'Sua Matrícula com este RG já está cadastrada em nosso sistema!',
             'cpf.required' => 'O campo " CPF " é obrigatório',
             'cpf.max' => 'O campo " CPF " não pode ser superior a 15 digitos!',
             'cpf.unique' => 'Sua Matrícula com este CPF já está cadastrada em nosso sistema!',
             'nascimento.required' => 'O campo " Data de Nascimento " é obrigatório!',
-            'nascimento.date' => 'O campo " Data de Nascimeto " está inválido!',
-            'nascimento.max' => 'O campo " Data de Nascimeto " não pode ser superior a 8 digitos!',
             'email.required' => 'O campo " E-mail " é obrigatório!',
-            'email.unique' => 'Já existe este email cadastrado!',
+            'email.unique' => 'Sua Matrícula com este E-MAIL já está cadastrada em nosso sistema!',
             'naturalidade.required' => 'O campo " Naturalidade " é obrigatório',
             'pai.required' => 'O campo " Nome do Pai " é obrigatório',
             'mae.required' => 'O campo " Nome da mãe " é obrigatório',
